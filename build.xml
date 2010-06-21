@@ -27,12 +27,12 @@
 **
 **
 -->
-<project name="myPluginName" default="dist" basedir=".">
+<project name="SimplifyArea" default="dist" basedir=".">
 
 	<!-- enter the SVN commit message -->
-	<property name="commit.message" value="Commit message" />
+	<property name="commit.message" value="Initial commit" />
 	<!-- enter the *lowest* JOSM version this plugin is currently compatible with -->
-	<property name="plugin.main.version" value="" />
+	<property name="plugin.main.version" value="2830" />
 
 
 	<!--
@@ -99,12 +99,12 @@
         ************************************************
     -->
 			<manifest>
-				<attribute name="Author" value="..."/>
-				<attribute name="Plugin-Class" value="..."/>
+				<attribute name="Author" value="Martin Ždila &lt;m.zdila@gmail.com&gt;"/>
+				<attribute name="Plugin-Class" value="sk.zdila.josm.plugin.simplify.SimplifyAreaPlugin"/>
 				<attribute name="Plugin-Date" value="${version.entry.commit.date}"/>
-				<attribute name="Plugin-Description" value="..."/>
-				<attribute name="Plugin-Icon" value="..."/>
-				<attribute name="Plugin-Link" value="..."/>
+				<attribute name="Plugin-Description" value="Simplify area by removing nodes on very obtuse angles. This can be constrained by maximum removed area size. Also average nearby nodes."/>
+				<!--<attribute name="Plugin-Icon" value="..."/>
+				<attribute name="Plugin-Link" value="..."/>-->
 				<attribute name="Plugin-Mainversion" value="${plugin.main.version}"/>
 				<attribute name="Plugin-Version" value="${version.entry.commit.revision}"/>
 			</manifest>
