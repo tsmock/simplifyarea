@@ -75,7 +75,7 @@ public class SimplifyAreaAction extends JosmAction {
         final int ret = HelpAwareOptionPane.showOptionDialog(
                 Main.parent,
                 "<html>" + trn("The selected way has nodes outside of the downloaded data region.", "The selected ways have nodes outside of the downloaded data region.", getCurrentDataSet().getSelectedWays().size())
-                        + "<br>" + tr("This can lead to nodes being deleted accidentally.") + "<br>" + tr("Do you want to delete them anyway?") + "</html>",
+                + "<br>" + tr("This can lead to nodes being deleted accidentally.") + "<br>" + tr("Do you want to delete them anyway?") + "</html>",
                 tr("Delete nodes outside of data regions?"), JOptionPane.WARNING_MESSAGE, null, // no special icon
                 options, options[0], null);
         return ret == 0;
@@ -209,8 +209,8 @@ public class SimplifyAreaAction extends JosmAction {
                     final double distanceWeight = Math.abs(crossTrackError(coord1, coord2, coord3)) / distanceThreshold;
 
                     final double weight = isRequiredNode(w, prevNode) ||
-                        !closed && i == len - 1 || // don't remove last node of the not closed way
-                        angleWeight > 1.0 || areaWeight > 1.0 || distanceWeight > 1.0 ? Double.MAX_VALUE :
+                    !closed && i == len - 1 || // don't remove last node of the not closed way
+                    angleWeight > 1.0 || areaWeight > 1.0 || distanceWeight > 1.0 ? Double.MAX_VALUE :
                         angleWeight * angleFactor + areaWeight * areaFactor + distanceWeight * distanceFactor;
 
                     if (weight < minWeight) {
